@@ -1,0 +1,65 @@
+﻿  main.c
+e:\test\test\code\main.c(140): fatal error C1010: 在查找预编译头时遇到意外的文件结尾。是否忘记了向源中添加“#include "stdafx.h"”?
+  stm32f10x_it.c
+e:\test\test\code\libraries\stm32f10x_it.c(88): fatal error C1010: 在查找预编译头时遇到意外的文件结尾。是否忘记了向源中添加“#include "stdafx.h"”?
+  stm32f10x_wwdg.c
+e:\test\test\code\libraries\stm32f10x_fwlib\src\stm32f10x_wwdg.c(225): fatal error C1010: 在查找预编译头时遇到意外的文件结尾。是否忘记了向源中添加“#include "stdafx.h"”?
+  stm32f10x_usart.c
+e:\test\test\code\libraries\stm32f10x_fwlib\src\stm32f10x_usart.c(1060): fatal error C1010: 在查找预编译头时遇到意外的文件结尾。是否忘记了向源中添加“#include "stdafx.h"”?
+  stm32f10x_tim.c
+e:\test\test\code\libraries\stm32f10x_fwlib\src\stm32f10x_tim.c(2892): fatal error C1010: 在查找预编译头时遇到意外的文件结尾。是否忘记了向源中添加“#include "stdafx.h"”?
+  stm32f10x_spi.c
+e:\test\test\code\libraries\stm32f10x_fwlib\src\stm32f10x_spi.c(910): fatal error C1010: 在查找预编译头时遇到意外的文件结尾。是否忘记了向源中添加“#include "stdafx.h"”?
+  stm32f10x_sdio.c
+e:\test\test\code\libraries\stm32f10x_fwlib\src\stm32f10x_sdio.c(801): fatal error C1010: 在查找预编译头时遇到意外的文件结尾。是否忘记了向源中添加“#include "stdafx.h"”?
+  stm32f10x_rtc.c
+e:\test\test\code\libraries\stm32f10x_fwlib\src\stm32f10x_rtc.c(340): fatal error C1010: 在查找预编译头时遇到意外的文件结尾。是否忘记了向源中添加“#include "stdafx.h"”?
+  stm32f10x_rcc.c
+e:\test\test\code\libraries\stm32f10x_fwlib\src\stm32f10x_rcc.c(131): warning C4005: “CFGR_PLL_Mask”: 宏重定义
+  e:\test\test\code\libraries\stm32f10x_fwlib\src\stm32f10x_rcc.c(129): note: 参见“CFGR_PLL_Mask”的前一个定义
+e:\test\test\code\libraries\stm32f10x_fwlib\src\stm32f10x_rcc.c(1472): fatal error C1010: 在查找预编译头时遇到意外的文件结尾。是否忘记了向源中添加“#include "stdafx.h"”?
+  stm32f10x_pwr.c
+e:\test\test\code\libraries\stm32f10x_fwlib\src\stm32f10x_pwr.c(308): fatal error C1010: 在查找预编译头时遇到意外的文件结尾。是否忘记了向源中添加“#include "stdafx.h"”?
+  stm32f10x_iwdg.c
+e:\test\test\code\libraries\stm32f10x_fwlib\src\stm32f10x_iwdg.c(191): fatal error C1010: 在查找预编译头时遇到意外的文件结尾。是否忘记了向源中添加“#include "stdafx.h"”?
+  stm32f10x_i2c.c
+e:\test\test\code\libraries\stm32f10x_fwlib\src\stm32f10x_i2c.c(1333): fatal error C1010: 在查找预编译头时遇到意外的文件结尾。是否忘记了向源中添加“#include "stdafx.h"”?
+  stm32f10x_gpio.c
+e:\test\test\code\libraries\stm32f10x_fwlib\src\stm32f10x_gpio.c(651): fatal error C1010: 在查找预编译头时遇到意外的文件结尾。是否忘记了向源中添加“#include "stdafx.h"”?
+  stm32f10x_fsmc.c
+e:\test\test\code\libraries\stm32f10x_fwlib\src\stm32f10x_fsmc.c(868): fatal error C1010: 在查找预编译头时遇到意外的文件结尾。是否忘记了向源中添加“#include "stdafx.h"”?
+  stm32f10x_flash.c
+e:\test\test\code\libraries\stm32f10x_fwlib\src\stm32f10x_flash.c(1686): fatal error C1010: 在查找预编译头时遇到意外的文件结尾。是否忘记了向源中添加“#include "stdafx.h"”?
+  stm32f10x_exti.c
+e:\test\test\code\libraries\stm32f10x_fwlib\src\stm32f10x_exti.c(270): fatal error C1010: 在查找预编译头时遇到意外的文件结尾。是否忘记了向源中添加“#include "stdafx.h"”?
+  stm32f10x_dma.c
+e:\test\test\code\libraries\stm32f10x_fwlib\src\stm32f10x_dma.c(716): fatal error C1010: 在查找预编译头时遇到意外的文件结尾。是否忘记了向源中添加“#include "stdafx.h"”?
+  stm32f10x_dbgmcu.c
+e:\test\test\code\libraries\stm32f10x_fwlib\src\stm32f10x_dbgmcu.c(163): fatal error C1010: 在查找预编译头时遇到意外的文件结尾。是否忘记了向源中添加“#include "stdafx.h"”?
+  stm32f10x_dac.c
+e:\test\test\code\libraries\stm32f10x_fwlib\src\stm32f10x_dac.c(572): fatal error C1010: 在查找预编译头时遇到意外的文件结尾。是否忘记了向源中添加“#include "stdafx.h"”?
+  stm32f10x_crc.c
+e:\test\test\code\libraries\stm32f10x_fwlib\src\stm32f10x_crc.c(161): fatal error C1010: 在查找预编译头时遇到意外的文件结尾。是否忘记了向源中添加“#include "stdafx.h"”?
+  正在生成代码...
+  正在编译...
+  stm32f10x_cec.c
+e:\test\test\code\libraries\stm32f10x_fwlib\src\stm32f10x_cec.c(434): fatal error C1010: 在查找预编译头时遇到意外的文件结尾。是否忘记了向源中添加“#include "stdafx.h"”?
+  stm32f10x_can.c
+e:\test\test\code\libraries\stm32f10x_fwlib\src\stm32f10x_can.c(1417): fatal error C1010: 在查找预编译头时遇到意外的文件结尾。是否忘记了向源中添加“#include "stdafx.h"”?
+  stm32f10x_bkp.c
+e:\test\test\code\libraries\stm32f10x_fwlib\src\stm32f10x_bkp.c(309): fatal error C1010: 在查找预编译头时遇到意外的文件结尾。是否忘记了向源中添加“#include "stdafx.h"”?
+  stm32f10x_adc.c
+e:\test\test\code\libraries\stm32f10x_fwlib\src\stm32f10x_adc.c(1309): fatal error C1010: 在查找预编译头时遇到意外的文件结尾。是否忘记了向源中添加“#include "stdafx.h"”?
+  misc.c
+e:\test\test\code\libraries\stm32f10x_fwlib\src\misc.c(226): fatal error C1010: 在查找预编译头时遇到意外的文件结尾。是否忘记了向源中添加“#include "stdafx.h"”?
+  timer.c
+e:\test\test\code\bsp\timer\timer.c(92): fatal error C1010: 在查找预编译头时遇到意外的文件结尾。是否忘记了向源中添加“#include "stdafx.h"”?
+  scan.c
+e:\test\test\code\bsp\scan\scan.c(249): fatal error C1010: 在查找预编译头时遇到意外的文件结尾。是否忘记了向源中添加“#include "stdafx.h"”?
+  led.c
+e:\test\test\code\bsp\led\led.c(22): fatal error C1010: 在查找预编译头时遇到意外的文件结尾。是否忘记了向源中添加“#include "stdafx.h"”?
+  exti.c
+e:\test\test\code\bsp\exti\exti.c(121): fatal error C1010: 在查找预编译头时遇到意外的文件结尾。是否忘记了向源中添加“#include "stdafx.h"”?
+  app_data.c
+e:\test\test\code\bsp\app_data\app_data.c(166): fatal error C1010: 在查找预编译头时遇到意外的文件结尾。是否忘记了向源中添加“#include "stdafx.h"”?
+  正在生成代码...

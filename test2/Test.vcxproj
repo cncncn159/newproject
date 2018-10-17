@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{AB8BE21E-F5A3-4538-BEFF-2582B442C0D4}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Test</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;STM32F10X_MD;USE_STDPERIPH_DRIVER;__CC_ARM;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(ProjectDir)Code\;$(ProjectDir)Code\APP\;$(ProjectDir)Code\BSP\TIMER\;$(ProjectDir)Code\BSP\SCAN\;$(ProjectDir)Code\BSP\LED\;$(ProjectDir)Code\BSP\EXTI\;$(ProjectDir)Code\BSP\app_data\;$(ProjectDir)Code\Libraries\;$(ProjectDir)Code\Libraries\CMSIS\;$(ProjectDir)Code\Libraries\STM32F10x_FWLib\inc\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Code\BSP\app_data\app_data.c" />
+    <ClCompile Include="Code\BSP\EXTI\exti.c" />
+    <ClCompile Include="Code\BSP\LED\led.c" />
+    <ClCompile Include="Code\BSP\SCAN\scan.c" />
+    <ClCompile Include="Code\BSP\TIMER\timer.c" />
+    <ClCompile Include="Code\Libraries\STM32F10x_FWLib\src\misc.c" />
+    <ClCompile Include="Code\Libraries\STM32F10x_FWLib\src\stm32f10x_adc.c" />
+    <ClCompile Include="Code\Libraries\STM32F10x_FWLib\src\stm32f10x_bkp.c" />
+    <ClCompile Include="Code\Libraries\STM32F10x_FWLib\src\stm32f10x_can.c" />
+    <ClCompile Include="Code\Libraries\STM32F10x_FWLib\src\stm32f10x_cec.c" />
+    <ClCompile Include="Code\Libraries\STM32F10x_FWLib\src\stm32f10x_crc.c" />
+    <ClCompile Include="Code\Libraries\STM32F10x_FWLib\src\stm32f10x_dac.c" />
+    <ClCompile Include="Code\Libraries\STM32F10x_FWLib\src\stm32f10x_dbgmcu.c" />
+    <ClCompile Include="Code\Libraries\STM32F10x_FWLib\src\stm32f10x_dma.c" />
+    <ClCompile Include="Code\Libraries\STM32F10x_FWLib\src\stm32f10x_exti.c" />
+    <ClCompile Include="Code\Libraries\STM32F10x_FWLib\src\stm32f10x_flash.c" />
+    <ClCompile Include="Code\Libraries\STM32F10x_FWLib\src\stm32f10x_fsmc.c" />
+    <ClCompile Include="Code\Libraries\STM32F10x_FWLib\src\stm32f10x_gpio.c" />
+    <ClCompile Include="Code\Libraries\STM32F10x_FWLib\src\stm32f10x_i2c.c" />
+    <ClCompile Include="Code\Libraries\STM32F10x_FWLib\src\stm32f10x_iwdg.c" />
+    <ClCompile Include="Code\Libraries\STM32F10x_FWLib\src\stm32f10x_pwr.c" />
+    <ClCompile Include="Code\Libraries\STM32F10x_FWLib\src\stm32f10x_rcc.c" />
+    <ClCompile Include="Code\Libraries\STM32F10x_FWLib\src\stm32f10x_rtc.c" />
+    <ClCompile Include="Code\Libraries\STM32F10x_FWLib\src\stm32f10x_sdio.c" />
+    <ClCompile Include="Code\Libraries\STM32F10x_FWLib\src\stm32f10x_spi.c" />
+    <ClCompile Include="Code\Libraries\STM32F10x_FWLib\src\stm32f10x_tim.c" />
+    <ClCompile Include="Code\Libraries\STM32F10x_FWLib\src\stm32f10x_usart.c" />
+    <ClCompile Include="Code\Libraries\STM32F10x_FWLib\src\stm32f10x_wwdg.c" />
+    <ClCompile Include="Code\Libraries\stm32f10x_it.c" />
+    <ClCompile Include="Code\main.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Code\BSP\app_data\app_data.h" />
+    <ClInclude Include="Code\BSP\EXTI\exti.h" />
+    <ClInclude Include="Code\BSP\LED\led.h" />
+    <ClInclude Include="Code\BSP\SCAN\scan.h" />
+    <ClInclude Include="Code\BSP\TIMER\timer.h" />
+    <ClInclude Include="Code\Libraries\stm32f10x_conf.h" />
+    <ClInclude Include="Code\Libraries\STM32F10x_FWLib\inc\misc.h" />
+    <ClInclude Include="Code\Libraries\STM32F10x_FWLib\inc\stm32f10x_adc.h" />
+    <ClInclude Include="Code\Libraries\STM32F10x_FWLib\inc\stm32f10x_bkp.h" />
+    <ClInclude Include="Code\Libraries\STM32F10x_FWLib\inc\stm32f10x_can.h" />
+    <ClInclude Include="Code\Libraries\STM32F10x_FWLib\inc\stm32f10x_cec.h" />
+    <ClInclude Include="Code\Libraries\STM32F10x_FWLib\inc\stm32f10x_crc.h" />
+    <ClInclude Include="Code\Libraries\STM32F10x_FWLib\inc\stm32f10x_dac.h" />
+    <ClInclude Include="Code\Libraries\STM32F10x_FWLib\inc\stm32f10x_dbgmcu.h" />
+    <ClInclude Include="Code\Libraries\STM32F10x_FWLib\inc\stm32f10x_dma.h" />
+    <ClInclude Include="Code\Libraries\STM32F10x_FWLib\inc\stm32f10x_exti.h" />
+    <ClInclude Include="Code\Libraries\STM32F10x_FWLib\inc\stm32f10x_flash.h" />
+    <ClInclude Include="Code\Libraries\STM32F10x_FWLib\inc\stm32f10x_fsmc.h" />
+    <ClInclude Include="Code\Libraries\STM32F10x_FWLib\inc\stm32f10x_gpio.h" />
+    <ClInclude Include="Code\Libraries\STM32F10x_FWLib\inc\stm32f10x_i2c.h" />
+    <ClInclude Include="Code\Libraries\STM32F10x_FWLib\inc\stm32f10x_iwdg.h" />
+    <ClInclude Include="Code\Libraries\STM32F10x_FWLib\inc\stm32f10x_pwr.h" />
+    <ClInclude Include="Code\Libraries\STM32F10x_FWLib\inc\stm32f10x_rcc.h" />
+    <ClInclude Include="Code\Libraries\STM32F10x_FWLib\inc\stm32f10x_rtc.h" />
+    <ClInclude Include="Code\Libraries\STM32F10x_FWLib\inc\stm32f10x_sdio.h" />
+    <ClInclude Include="Code\Libraries\STM32F10x_FWLib\inc\stm32f10x_spi.h" />
+    <ClInclude Include="Code\Libraries\STM32F10x_FWLib\inc\stm32f10x_tim.h" />
+    <ClInclude Include="Code\Libraries\STM32F10x_FWLib\inc\stm32f10x_usart.h" />
+    <ClInclude Include="Code\Libraries\STM32F10x_FWLib\inc\stm32f10x_wwdg.h" />
+    <ClInclude Include="Code\Libraries\stm32f10x_it.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
