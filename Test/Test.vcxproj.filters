@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="APP">
+      <UniqueIdentifier>{22a1f9ee-90a6-47a8-9434-ac266a3538da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BSP">
+      <UniqueIdentifier>{10c12e93-4761-45d2-a949-c673b541fb38}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Libraries">
+      <UniqueIdentifier>{6369b15b-a646-4dac-9e61-0d7196b8fdd8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SYSTEM">
+      <UniqueIdentifier>{36872556-18df-4bbe-869a-5def2f5afd1b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="USER">
+      <UniqueIdentifier>{7f8540b0-04fd-464a-8515-d41721113c7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Libraries\CMSIS">
+      <UniqueIdentifier>{84089781-d883-4a4f-a965-763d73a650a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Libraries\STM32F1xx_StdPeriph_Drive">
+      <UniqueIdentifier>{285bd26f-1e77-4845-89fc-47b02bfa05e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Libraries\STM32F1xx_StdPeriph_Drive\src">
+      <UniqueIdentifier>{aa42537a-5dd3-4929-b555-9306662b5f75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Libraries\STM32F1xx_StdPeriph_Drive\inc">
+      <UniqueIdentifier>{3c2182e5-91a1-412c-93e2-ca0e28b0651c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BSP\app_data">
+      <UniqueIdentifier>{12615138-11d6-478c-b0d4-054026a9f7e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BSP\EXTI">
+      <UniqueIdentifier>{939aa767-36a5-45e4-97fb-2b57ba3545fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BSP\LED">
+      <UniqueIdentifier>{119f7b65-e2d3-4034-b784-6d95d37d3b7a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BSP\SCAN">
+      <UniqueIdentifier>{fb71bd77-f678-416b-a46a-2867f2e57eeb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BSP\TIMER">
+      <UniqueIdentifier>{9c5138f0-f9e3-49a7-8eda-63d28959531c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Code\main.c">
+      <Filter>USER</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Libraries\stm32f10x_it.c">
+      <Filter>SYSTEM</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Libraries\STM32F10x_FWLib\src\misc.c">
+      <Filter>Libraries\STM32F1xx_StdPeriph_Drive\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Libraries\STM32F10x_FWLib\src\stm32f10x_adc.c">
+      <Filter>Libraries\STM32F1xx_StdPeriph_Drive\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Libraries\STM32F10x_FWLib\src\stm32f10x_bkp.c">
+      <Filter>Libraries\STM32F1xx_StdPeriph_Drive\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Libraries\STM32F10x_FWLib\src\stm32f10x_can.c">
+      <Filter>Libraries\STM32F1xx_StdPeriph_Drive\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Libraries\STM32F10x_FWLib\src\stm32f10x_cec.c">
+      <Filter>Libraries\STM32F1xx_StdPeriph_Drive\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Libraries\STM32F10x_FWLib\src\stm32f10x_crc.c">
+      <Filter>Libraries\STM32F1xx_StdPeriph_Drive\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Libraries\STM32F10x_FWLib\src\stm32f10x_dac.c">
+      <Filter>Libraries\STM32F1xx_StdPeriph_Drive\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Libraries\STM32F10x_FWLib\src\stm32f10x_dbgmcu.c">
+      <Filter>Libraries\STM32F1xx_StdPeriph_Drive\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Libraries\STM32F10x_FWLib\src\stm32f10x_dma.c">
+      <Filter>Libraries\STM32F1xx_StdPeriph_Drive\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Libraries\STM32F10x_FWLib\src\stm32f10x_exti.c">
+      <Filter>Libraries\STM32F1xx_StdPeriph_Drive\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Libraries\STM32F10x_FWLib\src\stm32f10x_flash.c">
+      <Filter>Libraries\STM32F1xx_StdPeriph_Drive\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Libraries\STM32F10x_FWLib\src\stm32f10x_fsmc.c">
+      <Filter>Libraries\STM32F1xx_StdPeriph_Drive\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Libraries\STM32F10x_FWLib\src\stm32f10x_gpio.c">
+      <Filter>Libraries\STM32F1xx_StdPeriph_Drive\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Libraries\STM32F10x_FWLib\src\stm32f10x_i2c.c">
+      <Filter>Libraries\STM32F1xx_StdPeriph_Drive\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Libraries\STM32F10x_FWLib\src\stm32f10x_iwdg.c">
+      <Filter>Libraries\STM32F1xx_StdPeriph_Drive\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Libraries\STM32F10x_FWLib\src\stm32f10x_pwr.c">
+      <Filter>Libraries\STM32F1xx_StdPeriph_Drive\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Libraries\STM32F10x_FWLib\src\stm32f10x_rcc.c">
+      <Filter>Libraries\STM32F1xx_StdPeriph_Drive\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Libraries\STM32F10x_FWLib\src\stm32f10x_rtc.c">
+      <Filter>Libraries\STM32F1xx_StdPeriph_Drive\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Libraries\STM32F10x_FWLib\src\stm32f10x_sdio.c">
+      <Filter>Libraries\STM32F1xx_StdPeriph_Drive\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Libraries\STM32F10x_FWLib\src\stm32f10x_spi.c">
+      <Filter>Libraries\STM32F1xx_StdPeriph_Drive\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Libraries\STM32F10x_FWLib\src\stm32f10x_tim.c">
+      <Filter>Libraries\STM32F1xx_StdPeriph_Drive\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Libraries\STM32F10x_FWLib\src\stm32f10x_usart.c">
+      <Filter>Libraries\STM32F1xx_StdPeriph_Drive\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Libraries\STM32F10x_FWLib\src\stm32f10x_wwdg.c">
+      <Filter>Libraries\STM32F1xx_StdPeriph_Drive\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\BSP\app_data\app_data.c">
+      <Filter>BSP\app_data</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\BSP\EXTI\exti.c">
+      <Filter>BSP\EXTI</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\BSP\LED\led.c">
+      <Filter>BSP\LED</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\BSP\TIMER\timer.c">
+      <Filter>BSP\TIMER</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\BSP\SCAN\scan.c">
+      <Filter>BSP\SCAN</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Code\Libraries\stm32f10x_conf.h">
+      <Filter>SYSTEM</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Libraries\stm32f10x_it.h">
+      <Filter>SYSTEM</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Libraries\STM32F10x_FWLib\inc\misc.h">
+      <Filter>Libraries\STM32F1xx_StdPeriph_Drive\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Libraries\STM32F10x_FWLib\inc\stm32f10x_adc.h">
+      <Filter>Libraries\STM32F1xx_StdPeriph_Drive\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Libraries\STM32F10x_FWLib\inc\stm32f10x_bkp.h">
+      <Filter>Libraries\STM32F1xx_StdPeriph_Drive\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Libraries\STM32F10x_FWLib\inc\stm32f10x_can.h">
+      <Filter>Libraries\STM32F1xx_StdPeriph_Drive\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Libraries\STM32F10x_FWLib\inc\stm32f10x_cec.h">
+      <Filter>Libraries\STM32F1xx_StdPeriph_Drive\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Libraries\STM32F10x_FWLib\inc\stm32f10x_crc.h">
+      <Filter>Libraries\STM32F1xx_StdPeriph_Drive\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Libraries\STM32F10x_FWLib\inc\stm32f10x_dac.h">
+      <Filter>Libraries\STM32F1xx_StdPeriph_Drive\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Libraries\STM32F10x_FWLib\inc\stm32f10x_dbgmcu.h">
+      <Filter>Libraries\STM32F1xx_StdPeriph_Drive\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Libraries\STM32F10x_FWLib\inc\stm32f10x_dma.h">
+      <Filter>Libraries\STM32F1xx_StdPeriph_Drive\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Libraries\STM32F10x_FWLib\inc\stm32f10x_exti.h">
+      <Filter>Libraries\STM32F1xx_StdPeriph_Drive\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Libraries\STM32F10x_FWLib\inc\stm32f10x_flash.h">
+      <Filter>Libraries\STM32F1xx_StdPeriph_Drive\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Libraries\STM32F10x_FWLib\inc\stm32f10x_fsmc.h">
+      <Filter>Libraries\STM32F1xx_StdPeriph_Drive\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Libraries\STM32F10x_FWLib\inc\stm32f10x_gpio.h">
+      <Filter>Libraries\STM32F1xx_StdPeriph_Drive\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Libraries\STM32F10x_FWLib\inc\stm32f10x_i2c.h">
+      <Filter>Libraries\STM32F1xx_StdPeriph_Drive\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Libraries\STM32F10x_FWLib\inc\stm32f10x_iwdg.h">
+      <Filter>Libraries\STM32F1xx_StdPeriph_Drive\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Libraries\STM32F10x_FWLib\inc\stm32f10x_pwr.h">
+      <Filter>Libraries\STM32F1xx_StdPeriph_Drive\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Libraries\STM32F10x_FWLib\inc\stm32f10x_rcc.h">
+      <Filter>Libraries\STM32F1xx_StdPeriph_Drive\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Libraries\STM32F10x_FWLib\inc\stm32f10x_rtc.h">
+      <Filter>Libraries\STM32F1xx_StdPeriph_Drive\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Libraries\STM32F10x_FWLib\inc\stm32f10x_sdio.h">
+      <Filter>Libraries\STM32F1xx_StdPeriph_Drive\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Libraries\STM32F10x_FWLib\inc\stm32f10x_spi.h">
+      <Filter>Libraries\STM32F1xx_StdPeriph_Drive\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Libraries\STM32F10x_FWLib\inc\stm32f10x_tim.h">
+      <Filter>Libraries\STM32F1xx_StdPeriph_Drive\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Libraries\STM32F10x_FWLib\inc\stm32f10x_usart.h">
+      <Filter>Libraries\STM32F1xx_StdPeriph_Drive\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Libraries\STM32F10x_FWLib\inc\stm32f10x_wwdg.h">
+      <Filter>Libraries\STM32F1xx_StdPeriph_Drive\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\BSP\app_data\app_data.h">
+      <Filter>BSP\app_data</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\BSP\EXTI\exti.h">
+      <Filter>BSP\EXTI</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\BSP\LED\led.h">
+      <Filter>BSP\LED</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\BSP\TIMER\timer.h">
+      <Filter>BSP\TIMER</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\BSP\SCAN\scan.h">
+      <Filter>BSP\SCAN</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
