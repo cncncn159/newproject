@@ -10,13 +10,15 @@ void AppDataDeal(const u8* data,u16 len)
 {
 	u8 i,ret = 0xff;
 	u8 rec_ret; //接收回复，0：无需回复，1：需要回复
-	u8 ret_data[50];
+	u8 ret_data[50];//完整性判断后的待处理数据
+	u16 ret_len;//待处理数据的帧长度
 	
 	//*******接收部分*******//
+	//*******|___数据完整性判断
 	if(data[0] == FRAME_HEX_HEADER)
 	{
 		//首帧为0x68
-		ret = JudgeFrame(data,len);
+		ret = JudgeFrame(data,len,ret_data,&ret_len);//10-18数据完整性判断 要增加判断完后的数据输出和数据长度
 	}
 	else
 	{
@@ -27,11 +29,12 @@ void AppDataDeal(const u8* data,u16 len)
 			{
 				//找到首帧
 				
-				ret=JudgeFrame(&data[i],len-i,ret_data);
+				ret=JudgeFrame(&data[i],len-i,ret_data,&ret_len);//10-18数据完整性判断 要增加判断完后的数据输出和数据长度
 				break;
 			}
 		}
 	}
+	//*******|___数据处理
 	if(ret == 0xff)
 	{
 		//历遍完毕没有找到帧头
@@ -39,6 +42,19 @@ void AppDataDeal(const u8* data,u16 len)
 	else if(ret == 0)
 	{
 		//接收成功
+		if (JudgementFixationFrame(ret_data, ret_len)==1u)//先判断帧的固定数据是否正确
+		{//数据正确
+			if (FrameDealDataToStruct(ret_data, &ret_len, &RecFrame) == 1u)
+			{
+				if ((RecFrame.type == HANDSHAKE_FRAMETYPE) || (RecFrame.type == HEARTBEAT_FRAMETYPE)\
+					|| (RecFrame.type == DETECTION_FRAMETYPE) || (RecFrame.type == MEASURING_FRAMETYPE)\
+					|| (RecFrame.type == END_FRAMETYPE))
+				{
+					rec_ret = 1u;
+				}
+			}
+		}
+
 	}
 	else
 	{
@@ -57,11 +73,11 @@ void AppDataDeal(const u8* data,u16 len)
 		}
 	}
 	//********发送部分*********//
-	if(rec_ret)
-	{
+	if(rec_ret == 1u)
+	{//需要回复
 		rec_ret = 0;
 		if(RecFrame.type == HANDSHAKE_FRAMETYPE)
-		{	//回复心跳
+		{	//回复握手
 			
 		}
 	}
@@ -162,4 +178,11 @@ static u8 JudgementFixationFrame(u8* indata,u16 inlen)
 		ret = 0;
 	}
 	return ret;
+}
+/*数据处理 将帧数组输入处理转换成结构体信息 
+	indata：输入的数组 data：输入的数组长度 outframe：输出的结构体
+	返回 1：正确 0：失败*/
+static u8 FrameDealDataToStruct(u8* indata, u16 datalen, sFrame* outframe)
+{
+	//...
 }

@@ -11,20 +11,20 @@
 #define SOFTWARE_VERSION	0x00	//软件版本
 
 //帧类型
-#define HANDSHAKE_FRAMETYPE		0x01	
+#define HANDSHAKE_FRAMETYPE		0x01	//握手
 
-#define HEARTBEAT_FRAMETYPE		0x02
+#define HEARTBEAT_FRAMETYPE		0x02	//心跳
 
-#define DETECTION_FRAMETYPE		0x03
+#define DETECTION_FRAMETYPE		0x03	//检测
 
-#define MEASURING_FRAMETYPE		0x04
+#define MEASURING_FRAMETYPE		0x04	//测量中
 
-#define END_FRAMETYPE			0x05
+#define END_FRAMETYPE			0x05	//测量结束
 
-#define DATA_FRAMETYPE			0x06
-#define INQUIRE_FRAMETYPE		0x06
+#define DATA_FRAMETYPE			0x06	//测量数据
+#define INQUIRE_FRAMETYPE		0x06	//测量查询
 
-#define FIXATION_LEN			0x07
+#define FIXATION_LEN			0x07	//固定长度
 
 typedef struct
 {
