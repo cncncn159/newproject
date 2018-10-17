@@ -55,15 +55,6 @@
     <Filter Include="BSP\TIMER">
       <UniqueIdentifier>{9c5138f0-f9e3-49a7-8eda-63d28959531c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="BSP\sys">
-      <UniqueIdentifier>{8425378b-1d02-45ed-a5c6-909f0c731e3a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="BSP\delay">
-      <UniqueIdentifier>{8fec41d5-1855-4f9f-8621-3d8825e8d8a4}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="BSP\usart">
-      <UniqueIdentifier>{76efd6c7-1256-4a6c-9048-a800a27a8eca}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -159,15 +150,6 @@
     <ClCompile Include="Code\BSP\SCAN\scan.c">
       <Filter>BSP\SCAN</Filter>
     </ClCompile>
-    <ClCompile Include="Code\BSP\delay\delay.c">
-      <Filter>BSP\delay</Filter>
-    </ClCompile>
-    <ClCompile Include="Code\BSP\usart\usart.c">
-      <Filter>BSP\usart</Filter>
-    </ClCompile>
-    <ClCompile Include="Code\BSP\sys\sys.c">
-      <Filter>BSP\sys</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Code\Libraries\stm32f10x_conf.h">
@@ -259,15 +241,6 @@
     </ClInclude>
     <ClInclude Include="Code\BSP\SCAN\scan.h">
       <Filter>BSP\SCAN</Filter>
-    </ClInclude>
-    <ClInclude Include="Code\BSP\delay\delay.h">
-      <Filter>BSP\delay</Filter>
-    </ClInclude>
-    <ClInclude Include="Code\BSP\usart\usart.h">
-      <Filter>BSP\usart</Filter>
-    </ClInclude>
-    <ClInclude Include="Code\BSP\sys\sys.h">
-      <Filter>BSP\sys</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

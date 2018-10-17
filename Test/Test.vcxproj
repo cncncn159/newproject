@@ -147,13 +147,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Code\BSP\app_data\app_data.c" />
-    <ClCompile Include="Code\BSP\delay\delay.c" />
     <ClCompile Include="Code\BSP\EXTI\exti.c" />
     <ClCompile Include="Code\BSP\LED\led.c" />
     <ClCompile Include="Code\BSP\SCAN\scan.c" />
-    <ClCompile Include="Code\BSP\sys\sys.c" />
     <ClCompile Include="Code\BSP\TIMER\timer.c" />
-    <ClCompile Include="Code\BSP\usart\usart.c" />
     <ClCompile Include="Code\Libraries\STM32F10x_FWLib\src\misc.c" />
     <ClCompile Include="Code\Libraries\STM32F10x_FWLib\src\stm32f10x_adc.c" />
     <ClCompile Include="Code\Libraries\STM32F10x_FWLib\src\stm32f10x_bkp.c" />
@@ -182,13 +179,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Code\BSP\app_data\app_data.h" />
-    <ClInclude Include="Code\BSP\delay\delay.h" />
     <ClInclude Include="Code\BSP\EXTI\exti.h" />
     <ClInclude Include="Code\BSP\LED\led.h" />
     <ClInclude Include="Code\BSP\SCAN\scan.h" />
-    <ClInclude Include="Code\BSP\sys\sys.h" />
     <ClInclude Include="Code\BSP\TIMER\timer.h" />
-    <ClInclude Include="Code\BSP\usart\usart.h" />
     <ClInclude Include="Code\Libraries\stm32f10x_conf.h" />
     <ClInclude Include="Code\Libraries\STM32F10x_FWLib\inc\misc.h" />
     <ClInclude Include="Code\Libraries\STM32F10x_FWLib\inc\stm32f10x_adc.h" />
