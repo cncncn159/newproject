@@ -55,6 +55,15 @@
     <Filter Include="BSP\TIMER">
       <UniqueIdentifier>{9c5138f0-f9e3-49a7-8eda-63d28959531c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="BSP\delay">
+      <UniqueIdentifier>{c6888e7b-b86c-4593-aa2f-1f55d3ef73d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BSP\usart">
+      <UniqueIdentifier>{f6045127-9aa4-457d-bdf6-4905686ea1b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BSP\sys">
+      <UniqueIdentifier>{7795a135-6b3e-457f-8202-3f353efc9d22}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -150,6 +159,21 @@
     <ClCompile Include="Code\BSP\SCAN\scan.c">
       <Filter>BSP\SCAN</Filter>
     </ClCompile>
+    <ClCompile Include="Code\BSP\delay\delay.c">
+      <Filter>BSP\delay</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\BSP\sys\sys.c">
+      <Filter>BSP\sys</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\BSP\usart\usart.c">
+      <Filter>BSP\usart</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Libraries\CMSIS\core_cm3.c">
+      <Filter>Libraries\CMSIS</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Libraries\CMSIS\system_stm32f10x.c">
+      <Filter>Libraries\CMSIS</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Code\Libraries\stm32f10x_conf.h">
@@ -242,5 +266,28 @@
     <ClInclude Include="Code\BSP\SCAN\scan.h">
       <Filter>BSP\SCAN</Filter>
     </ClInclude>
+    <ClInclude Include="Code\BSP\delay\delay.h">
+      <Filter>BSP\delay</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\BSP\sys\sys.h">
+      <Filter>BSP\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\BSP\usart\usart.h">
+      <Filter>BSP\usart</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Libraries\CMSIS\core_cm3.h">
+      <Filter>Libraries\CMSIS</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Libraries\CMSIS\system_stm32f10x.h">
+      <Filter>Libraries\CMSIS</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Libraries\stm32f10x.h">
+      <Filter>Libraries\CMSIS</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Code\Libraries\CMSIS\startup_stm32f10x_md.s">
+      <Filter>Libraries\CMSIS</Filter>
+    </None>
   </ItemGroup>
 </Project>
