@@ -2,6 +2,7 @@
 #define __USART_H
 #include "stdio.h"	
 #include "sys.h" 
+#include "app_data.h"
 //////////////////////////////////////////////////////////////////////////////////	 
 //本程序只供学习使用，未经作者许可，不得用于其它任何用途
 //ALIENTEK STM32开发板
@@ -36,6 +37,7 @@ void Uatr1_init(u32 bound);
 void Uatr2_init(u32 bound);
 void Uart2_Rec_OverFrame(void);
 void Uart2_handle(void);
+void Uart2_Send(u8 len, u8* data);
 #endif
 
 

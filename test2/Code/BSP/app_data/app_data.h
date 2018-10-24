@@ -2,13 +2,15 @@
 #define APP_DADA_H__
 #include "sys.h"
 #include "scan.h"
+#include "usart.h"
 
-#define NULL    ((void *)0)
+//#define NULL    ((void *)0)
 
 #define FRAME_HEX_HEADER 	0x68
 #define FRAME_HEX_TAIL		0x7f
 
 #define SOFTWARE_VERSION	0x00	//软件版本
+#define HARDWARE_VERSION	LGJType	//0xb4 180
 
 //帧类型
 #define HANDSHAKE_FRAMETYPE		0x01	//握手
@@ -24,7 +26,26 @@
 #define DATA_FRAMETYPE			0x06	//测量数据
 #define INQUIRE_FRAMETYPE		0x06	//测量查询
 
-#define FIXATION_LEN			0x07	//固定长度
+#define FIXATION_LEN			0x07	//固定长度(一帧数总长度减数据长度)
+#define FORMAT_LEN				0x04	//格式长度(由帧头帧尾和长度帧构成)
+
+#define COMMAND_TOTAL_NUM		10		//指令集最大长度 有预留
+
+typedef struct
+{
+	u8 order;
+	void (*execute)(void);//指令处理后反回上传指令
+}sCommandAppData;
+
+/*帧先通过校验(找0x68 然后提取帧长度，由长度找到尾帧，成功则校验通过)*/
+typedef enum
+{
+	E_FRAME_OK=0,			//帧处理成功
+	E_FRAME_INCOMPLETE,		//帧不完整
+	E_FRAME_LEN_LACK,		//长度不够
+	E_FRAME_VERIFY,			//校验不通过
+	E_FRAME_VERSION			//版本号对应不上（帧处理成功）
+}eRetFrame;
 
 typedef struct
 {
@@ -43,6 +64,6 @@ typedef struct
 	u8	tail;	//帧尾
 }sFrame;
 
-void AppDataDeal(const u8 *data,u16 len);
+u8 AppDataDeal(const u8 *data,u16 len);
 
 #endif

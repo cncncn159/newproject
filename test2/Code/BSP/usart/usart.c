@@ -241,5 +241,15 @@ void Uart2_handle(void)
 	}
 }
 
+void Uart2_Send(u8 len, u8* data)
+{
+	u16 i;
+	for (i = 0; i < len; i++)
+	{
+		USART_SendData(USART2, data[i]);
+		while (USART_GetFlagStatus(USART2, USART_FLAG_TC) != SET);
+	}
+}
+
 #endif	
 
