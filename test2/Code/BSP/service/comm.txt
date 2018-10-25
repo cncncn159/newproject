@@ -1,0 +1,96 @@
+#include "comm.h"
+#include "data_deal.h"
+
+uCommRecFlag RecFlag;
+static u8 CommStage = E_INIT_STA;		//通讯阶段
+static u8 V_Flag;						//收到消息的版本号是否正确
+										//1为硬件版本错 2为软件版本错 
+										//0为正确
+
+/**实时获取数据处理后的消息再处理，可以放在main中
+这里还是要有部分数据帧需要上层包装后再传下去**/
+void CommHandle(void)
+{
+	RecFlag = DataDealCommRecFlagGet(&V_Flag);	//获取下层消息
+	switch (CommStage)
+	{
+	case E_INIT_STA:
+	{
+		if (RecFlag.one_bit.hand_shake == 1u)
+		{
+			/**初始化阶段收到握手，立即回复
+			判断版本号无问题则进入工作状态**/
+			ReturnFrame(E_FRAME_HANDSHAKE);
+			if (V_Flag == 0)
+			{
+				CommStage = E_WORK_STA;
+			}
+		}
+		break;
+	}
+	case E_WORK_STA:
+	{
+		/**需求：需要增加在1分钟内没有心跳则退出工作状态
+		此处需要增加判断**/
+		if (RecFlag.one_bit.heart_beat == 1u)
+		{
+			/**工作状态下收到心跳回复**/
+			ReturnFrame(E_FRAME_HEARTBEAT);
+		}
+		if (RecFlag.one_bit.hand_shake == 1u)
+		{
+			/**工作阶段收到握手，立即回复**/
+			ReturnFrame(E_FRAME_HANDSHAKE);
+			if (V_Flag == 0)
+			{
+				CommStage = E_WORK_STA;
+			}
+		}
+		break;
+	}
+	default:
+		break;
+	}
+}
+/**在这里放数据帧赋值和包装，再调用下层的帧打包函数**/
+static ReturnFrame(eFrameType type)
+{
+	sFrameData framedata;	//数据帧
+
+	switch (type)
+	{
+	case E_FRAME_HANDSHAKE:
+	{
+		framedata.len = 2u;
+		if (V_Flag == 0)
+		{
+			framedata.data[0] = 1u;
+		}
+		else
+		{
+			framedata.data[0] = 0;
+			framedata.data[1] = V_Flag;
+		}
+		ReturnUartMsg(E_FRAME_HANDSHAKE, framedata);
+		break;
+	}
+	case E_FRAME_HEARTBEAT:
+	{
+		break;
+	}
+	case E_FRAME_DETECTION:
+	{
+		break;
+	}
+	case E_FRAME_MEASURING:
+	{
+		break;
+	}
+	case E_FRAME_END_MEASURE:
+	{
+		break;
+	}
+	default:
+		break;
+	}
+}
