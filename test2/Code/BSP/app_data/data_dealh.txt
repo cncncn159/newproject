@@ -1,0 +1,100 @@
+#ifndef APP_DADA_H__
+#define APP_DADA_H__
+#include "sys.h"
+#include "scan.h"
+#include "usart.h"
+
+//#define NULL    ((void *)0)
+
+#define FRAME_HEX_HEADER 	0x68
+#define FRAME_HEX_TAIL		0x7f
+
+#define SOFTWARE_VERSION	0x00	//软件版本
+#define HARDWARE_VERSION	LGJType	//0xb4 180
+
+//帧类型
+
+typedef enum
+{
+	E_FRAME_HANDSHAKE=1,				//握手
+	E_FRAME_HEARTBEAT,					//心跳
+	E_FRAME_DETECTION,					//检测
+	E_FRAME_MEASURING,					//测量中
+	E_FRAME_END_MEASURE,				//测量结束
+	E_FRAME_DATA_MEASURE,				//测量数据
+	E_FRAME_INQUIRE_MEASURE				//测量查询
+}eFrameType;							//帧类型
+
+#define HANDSHAKE_FRAMETYPE		0x01	//握手
+
+#define HEARTBEAT_FRAMETYPE		0x02	//心跳
+
+#define DETECTION_FRAMETYPE		0x03	//检测
+
+#define MEASURING_FRAMETYPE		0x04	//测量中
+
+#define END_FRAMETYPE			0x05	//测量结束
+
+#define DATA_FRAMETYPE			0x06	//测量数据
+#define INQUIRE_FRAMETYPE		0x06	//测量查询
+
+#define FIXATION_LEN			0x07	//固定长度(一帧数总长度减数据长度)
+#define FORMAT_LEN				0x04	//格式长度(由帧头帧尾和长度帧构成)
+
+#define COMMAND_TOTAL_NUM		10		//指令集最大长度 有预留
+
+typedef struct
+{
+	u8 order;
+	void (*execute)(void);//指令处理后反回上传指令
+}sCommandAppData;
+
+/*帧先通过校验(找0x68 然后提取帧长度，由长度找到尾帧，成功则校验通过)*/
+typedef enum
+{
+	E_FRAME_OK=0,			//帧处理成功
+	E_FRAME_INCOMPLETE,		//帧不完整
+	E_FRAME_LEN_LACK,		//长度不够
+	E_FRAME_VERIFY,			//校验不通过
+	E_FRAME_VERSION			//版本号对应不上（帧处理成功）
+}eRetFrame;					//帧处理回复
+
+typedef union
+{
+	struct {
+		u8 hand_shake : 1;
+		u8 heart_beat : 1;
+		u8 detection : 1;
+		u8 measuring : 1;
+		u8 measure_end : 1;
+		u8 measure_data : 1;
+		u8 measure_inquire : 1;
+		u8 reserve : 1;
+	}one_bit;
+	u8 all_bit;
+}uCommRecFlag;				//接收到收到报文信号
+
+
+
+typedef struct
+{
+	u8 len;
+	u8 data[50];
+}sFrameData;
+
+typedef struct 
+{
+	u8 	header;	//帧头
+	u16 len;	//帧长度
+	u8 	type;	//帧类型
+	u8	version;//版本号
+	u16 hard;	//硬件
+	sFrameData FrameData;
+	u8	tail;	//帧尾
+}sFrame;
+
+extern u8 AppDataDeal(const u8 *data,u16 len);
+extern u8 DataDealCommRecFlagGet(u8* v_flag);			//获取后会把标志清零
+extern void ReturnUartMsg(eFrameType type, sFrameData data);//输入回复的帧类型和参数
+
+#endif

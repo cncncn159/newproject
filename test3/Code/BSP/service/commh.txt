@@ -1,0 +1,16 @@
+#ifndef COMM_H_
+#define COMM_H_
+
+#include "sys.h"
+
+typedef enum
+{
+	E_INIT_STA,				//初始阶段
+	E_WORK_STA				//工作阶段
+
+}eCommStage;				//通讯阶段
+
+
+void CommHandle(void);
+
+#endif
